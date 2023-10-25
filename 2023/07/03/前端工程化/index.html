@@ -5,13 +5,13 @@
 <meta property="og:site_name" content="往下翻！！！让你接下来时间的性价比翻十番">
 <meta property="og:description" content="Node.jsNode运行js程序的底层原理： JS代码首先经过V8引擎，通过Node中的Bingdings，将任务放到Libuv的事件循环中 libuv是用C语言编写的库 libuv提供了事件循环、文件系统读写、网络IO、线程池内容，处理完的事件放入事件队列再返回V8，JS中进行回调 Node应用场景 前端开发库以node包进行管理 npm,yam,pnpm工具为前端开发 web服务器开发，中间">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/3.jpg">
+<meta property="og:image" content="http://example.com/img/12.jpg">
 <meta property="article:published_time" content="2023-07-03T08:32:22.000Z">
-<meta property="article:modified_time" content="2023-07-03T09:09:09.972Z">
+<meta property="article:modified_time" content="2023-10-25T06:42:26.730Z">
 <meta property="article:author" content="贺浩轩">
-<meta property="article:tag" content="博客,12">
+<meta property="article:tag" content="前端工程化">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/img/3.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/07/03/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="http://example.com/img/12.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/07/03/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: undefined,
@@ -53,7 +53,7 @@
   isHome: false,
   isHighlightShrink: true,
   isToc: true,
-  postUpdate: '2023-07-03 17:09:09'
+  postUpdate: '2023-10-25 14:42:26'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -142,7 +142,7 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pic1.zhimg.com/80/v2-97c5e8449ccc63d49a298291c61096df_720w.webp?source=1940ef5c" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">46</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/3.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">往下翻！！！让你接下来时间的性价比翻十番</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">前端工程化</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-03T08:32:22.000Z" title="发表于 2023-07-03 16:32:22">2023-07-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-07-03T09:09:09.972Z" title="更新于 2023-07-03 17:09:09">2023-07-03</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="前端工程化"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><p>Node运行js程序的底层原理：</p>
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pic1.zhimg.com/80/v2-97c5e8449ccc63d49a298291c61096df_720w.webp?source=1940ef5c" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">53</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/12.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">往下翻！！！让你接下来时间的性价比翻十番</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">前端工程化</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-03T08:32:22.000Z" title="发表于 2023-07-03 16:32:22">2023-07-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-10-25T06:42:26.730Z" title="更新于 2023-10-25 14:42:26">2023-10-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF/%E5%B7%A5%E7%A8%8B%E5%8C%96/">工程化</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="前端工程化"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><p>Node运行js程序的底层原理：</p>
 <p>JS代码首先经过V8引擎，通过Node中的Bingdings，将任务放到Libuv的事件循环中</p>
 <p>libuv是用C语言编写的库</p>
 <p>libuv提供了事件循环、文件系统读写、网络IO、线程池内容，处理完的事件放入事件队列再返回V8，JS中进行回调</p>
@@ -154,4 +154,203 @@
 <li>编写脚本工具，Node运行</li>
 <li>Electron开发桌面应用程序</li>
 </ul>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">贺浩轩</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/07/03/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/">http://example.com/2023/07/03/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">往下翻！！！让你接下来时间的性价比翻十番</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/3.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/07/03/JS%E9%AB%98%E7%BA%A7/"><img class="prev-cover" src="/img/12.jpg" onerror="onerror=null;src='/img/3.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">JS高级</div></div></a></div><div class="next-post pull-right"><a href="/2023/06/26/DOM-%E5%92%8C-BOM/"><img class="next-cover" src="/img/12.jpg" onerror="onerror=null;src='/img/3.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">DOM 和 BOM</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://pic1.zhimg.com/80/v2-97c5e8449ccc63d49a298291c61096df_720w.webp?source=1940ef5c" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">贺浩轩</div><div class="author-info__description">未来的一级棒程序猿！！   继续喜欢杰伦是不会让感性丢失的最后稻草</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">46</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">从分类页或标签寻找会更方便哦！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Node-js"><span class="toc-number">1.</span> <span class="toc-text">Node.js</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Node%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">1.1.</span> <span class="toc-text">Node应用场景</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/07/23/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86%E7%82%B9%E5%88%86%E6%B2%BB/" title="树链剖分点分治"><img src="https://img-blog.csdnimg.cn/a8cc0a221bea49fcbb78bb7d601afcf5.jpeg" onerror="this.onerror=null;this.src='/img/3.jpg'" alt="树链剖分点分治"/></a><div class="content"><a class="title" href="/2023/07/23/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86%E7%82%B9%E5%88%86%E6%B2%BB/" title="树链剖分点分治">树链剖分点分治</a><time datetime="2023-07-23T03:14:39.000Z" title="发表于 2023-07-23 11:14:39">2023-07-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/19/ACM%E5%86%B2%E9%93%B6%E6%9D%BF%E5%AD%90/" title="ACM冲银板子"><img src="/img/5.jpg" onerror="this.onerror=null;this.src='/img/3.jpg'" alt="ACM冲银板子"/></a><div class="content"><a class="title" href="/2023/07/19/ACM%E5%86%B2%E9%93%B6%E6%9D%BF%E5%AD%90/" title="ACM冲银板子">ACM冲银板子</a><time datetime="2023-07-19T08:57:08.000Z" title="发表于 2023-07-19 16:57:08">2023-07-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/05/%E8%81%94%E9%80%9A%E5%88%86%E9%87%8F/" title="连通分量"><img src="https://img-blog.csdnimg.cn/a8cc0a221bea49fcbb78bb7d601afcf5.jpeg" onerror="this.onerror=null;this.src='/img/3.jpg'" alt="连通分量"/></a><div class="content"><a class="title" href="/2023/07/05/%E8%81%94%E9%80%9A%E5%88%86%E9%87%8F/" title="连通分量">连通分量</a><time datetime="2023-07-05T02:41:49.000Z" title="发表于 2023-07-05 10:41:49">2023-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/04/ES6/" title="ES6"><img src="/img/12.jpg" onerror="this.onerror=null;this.src='/img/3.jpg'" alt="ES6"/></a><div class="content"><a class="title" href="/2023/07/04/ES6/" title="ES6">ES6</a><time datetime="2023-07-04T07:48:01.000Z" title="发表于 2023-07-04 15:48:01">2023-07-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/07/03/JS%E9%AB%98%E7%BA%A7/" title="JS高级"><img src="/img/12.jpg" onerror="this.onerror=null;this.src='/img/3.jpg'" alt="JS高级"/></a><div class="content"><a class="title" href="/2023/07/03/JS%E9%AB%98%E7%BA%A7/" title="JS高级">JS高级</a><time datetime="2023-07-03T14:40:12.000Z" title="发表于 2023-07-03 22:40:12">2023-07-03</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/3.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 贺浩轩</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><hr>
+<h2 id="Node-版本控制工具：nvm-windows"><a href="#Node-版本控制工具：nvm-windows" class="headerlink" title="Node 版本控制工具：nvm-windows"></a>Node 版本控制工具：nvm-windows</h2><p>电脑上可以安装多个Node版本并能根据需要灵活切换，官方的两个控制工具n、nvm都不支持Windows。github上有开发出来的nvm-windows，我们用这个进行控制</p>
+<p><code>nvm list</code>表示可以控制的版本</p>
+<p><code>nvm use</code>直接切换node版本号</p>
+<h2 id="Node输入"><a href="#Node输入" class="headerlink" title="Node输入"></a>Node输入</h2><p>在终端用Node执行JS代码后面可以跟参数，在JS中process.argv[]可以获取某一个参数，与在Linux中的Shell编程同理</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> num1 = process.<span class="property">argv</span>[<span class="number">2</span>]</span><br><span class="line"><span class="keyword">const</span> num2 = process.<span class="property">argv</span>[<span class="number">3</span>]</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num1 + num2)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Node中一些特殊的全局变量"><a href="#Node中一些特殊的全局变量" class="headerlink" title="Node中一些特殊的全局变量"></a>Node中一些特殊的全局变量</h2><p>Node中没有Window对象，但有个类似的global对象</p>
+<ul>
+<li>__dirname：当前文件所在的目录结构</li>
+<li>__filename：当前目录+文件名称</li>
+<li>process：有关当前进程的信息</li>
+<li>各种各样的定时器方法，浏览器的那一套Node也有</li>
+</ul>
+<p><strong>模块化部分</strong></p>
+<h2 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h2><p>将程序划分为一个一个小的结构，并且互相不影响，有助于开发</p>
+<p>在早期JS是没有自己的模块化编程方案的，社区就自己搞出了一套很流行的方案：commenJS</p>
+<h3 id="CommenJS"><a href="#CommenJS" class="headerlink" title="CommenJS"></a>CommenJS</h3><p>commenJS规定模块之间的沟通必须要经过传出数据模块的导出，传入数据模块的导入，但是他是社区的，浏览器不支持CommenJS所以在JS编写CommenJS由html引入JS文件是运行不了的，但是Node，webpack等内部实现了CommenJS，支持CommenJS的开发，所以我们用Node来进行学习测试</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//abc.js</span></span><br><span class="line"><span class="keyword">const</span> name = <span class="string">&quot;hhx&quot;</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">220</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">exports</span>.<span class="property">name</span> = name</span><br><span class="line"><span class="built_in">exports</span>.<span class="property">foo</span> = foo</span><br><span class="line"><span class="comment">//text.js</span></span><br><span class="line"><span class="keyword">const</span> util = <span class="built_in">require</span>(<span class="string">&quot;./abc.js&quot;</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(util)</span><br></pre></td></tr></table></figure>
+
+<p><strong>本质：exports是一个对象，导入导出就是将exports引用赋值给util</strong></p>
+<p>module.exports导出：module对象的exports属性是上一个exports的指针，所以也是同一个对象，但是Node是通过操作module.exports导入导出的，一旦module.exports写成新建的对象的形式，就不是同一个对象了，exports就没用了<strong>所以开发一般用module.exports</strong></p>
+<p>require的查找细则：</p>
+<ol>
+<li>根据路径导入自己编写的模块，没有后缀名会按X,X.js,X.json,X.node顺序查找，都没有就当成一个目录找这个目录下的index，index.js，index.json，index.node文件</li>
+<li>导入node提供的内置模块：require（”内置模块名称”），如果没有，那就不停在上层目录的node_modules（名字固定）目录下找，一直找到根目录</li>
+</ol>
+<p>require会自动执行被导入JS文件一次</p>
+<p><em>多个模块的加载顺序：多个模块与模块之间的关系就是一个有向图！！加载的顺序是DFS的顺序</em></p>
+<h3 id="-1"><a href="#-1" class="headerlink" title=""></a></h3><hr>
+<p>ES6推出自己的模块化方案ESmodule</p>
+<h3 id="ESmodule"><a href="#ESmodule" class="headerlink" title="ESmodule"></a>ESmodule</h3><p>export关键字导出</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> &#123;</span><br><span class="line">	name,</span><br><span class="line">    age,</span><br><span class="line">    sayhello</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>import关键字导入</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; name, age, sayhello &#125; <span class="keyword">from</span> <span class="string">&quot;./foo&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>vue中已经使用过就不细说了</p>
+<ul>
+<li>as关键字可以起别名，在导入导出都可以起别名，类似数据库sql语句</li>
+<li>也可以在定义变量前直接加export导出</li>
+</ul>
+<p>default用法：</p>
+<p> 当只导出一个重要数据时，且文件名已经能代表用途，就用default默认导出（一个模块只能有一个默认导出）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//导出文件</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> (<span class="params"></span>)&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="string">&quot;helo world&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//导入文件,foo就是对应上面的函数，相当于直接重命名了</span></span><br><span class="line"><span class="keyword">import</span> foo <span class="keyword">from</span> <span class="string">&#x27;./hello.js&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="包管理工具"><a href="#包管理工具" class="headerlink" title="包管理工具"></a>包管理工具</h2><h3 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h3><p>安装：属于Node自己的管理工具，安装Node自动安装npm</p>
+<p>npm下载包会直接下载到当前目录的node_modules文件夹下</p>
+<p><code>npm install dayjs</code> dayjs包就会出现在当前文件夹下</p>
+<h4 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h4><p>用于记录各种各样的项目信息</p>
+<p>手动从零创建项目 <code>npm init -y</code></p>
+<p>常见字段解释：</p>
+<ol>
+<li>name：项目名称</li>
+<li>version：当前项目版本号</li>
+<li>description：项目描述信息</li>
+<li>author：作者相关信息</li>
+<li>license：开源协议</li>
+<li>private：true代表私有，npm不能发布</li>
+<li>main：设置程序入口（上面谈到require会自动匹配文件夹下的index.js，但是如果有package.json，node会先解析package.json文件，如果main入口配置的是<em>*</em>.js，那么默认匹配就会变成*.js）</li>
+<li>scripts：是一个对象，里面放键值对<ul>
+<li>start：加一个node 的命令，相当于有一个直接运行的脚本</li>
+<li>build: 打包</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;start&quot;</span><span class="punctuation">:</span> <span class="string">&quot;node ./abc.js&quot;</span></span><br><span class="line">    <span class="attr">&quot;build&quot;</span><span class="punctuation">:</span> <span class="string">&quot;webpack abc.js&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>终端<code>npm run start</code>就可以运行 node .&#x2F;abc.js</p>
+<ol start="9">
+<li>dependencies：项目的依赖，运行需要的包也是一个对象，编写键值对</li>
+</ol>
+<p><code>npm install</code> 将自动下载dependencies内的包</p>
+<ol start="10">
+<li>devDependencies：开发依赖，生产环境用不到的会放在这里（都用到就是dependencies这里）</li>
+</ol>
+<p><code>npm install xxx --save-dev/-D</code> 就会放到devDenpendencies</p>
+<ol start="11">
+<li>peerDependencies：依赖的依赖，就是你依赖的一个包，必须以另一个包为前提</li>
+</ol>
+<p>开发依赖：理解为开发者必须要用的，webpack等</p>
+<p>生产依赖：使用者必须要用到，vue等</p>
+<h3 id="npm-install"><a href="#npm-install" class="headerlink" title="npm install"></a>npm install</h3><p>npm install xxx：安装到当前文件夹</p>
+<ul>
+<li>-g：全局安装，安装到Node专门管理的目录，且会添加到环境变量，一般安装工具型的包 </li>
+<li>-D：只是开发依赖</li>
+</ul>
+<p>npm 缓存：npm会把一些下载的包放入缓存，防止多次下载一个包每次去官网registry中下载，而每个包的标识符信息就会记录到package-lock.json中，经过算法找到对应的缓存<strong>应该是计算机组成原理的知识应用</strong></p>
+<p>package-lock.json文件：</p>
+<ul>
+<li>lockfileVersion：lock文件版本</li>
+<li>requires：使用requires来跟踪模块的依赖关系</li>
+<li>resolved：记录下载地址，在registry仓库中的位置</li>
+<li>integrity：缓存标识符</li>
+</ul>
+<p>这个文件操作全部自动，一般不用手动维护，能查看包与包之间明确的依赖信息，也能看到具体下载的什么版本的包</p>
+<p>npm其他命令：</p>
+<ul>
+<li>npm uninstall xxx：卸载</li>
+<li>npm rebuile：重新build</li>
+<li>npm cache clean：清除缓存</li>
+</ul>
+<h3 id="yarn"><a href="#yarn" class="headerlink" title="yarn"></a>yarn</h3><p>为弥补早期npm速度慢，版本混乱的缺陷而出现，等npm更新了以后基本相似没区别</p>
+<p><code>yarn init -y</code> 初始化package.json配置</p>
+<p><code>yarn add xxx</code>添加包</p>
+<h3 id="cnpm"><a href="#cnpm" class="headerlink" title="cnpm"></a>cnpm</h3><p>npm在国内的镜像服务器</p>
+<h3 id="-2"><a href="#-2" class="headerlink" title=""></a></h3><hr>
+<h3 id="pnpm"><a href="#pnpm" class="headerlink" title="pnpm"></a>pnpm</h3><p>越来越流行的管理工具，原来的包管理工具有一个这样的问题：如果有多个项目用的同样的库，那么这个库也会存在多份，大大占据了储存空间，pnpm的出现就是解决这个痛点</p>
+<p>pnpm多少个项目，同一个依赖包在磁盘上只有一份存储，不同项目是通过硬链接实现调用包</p>
+<p>pnpm采用非扁平化管理：</p>
+<p>扁平化的含义：按理说比如我安装webpack，里面有许多依赖包，按逻辑应该安装在webpack下的node_module文件夹下，扁平化的意思是把所有包都放到项目文件夹下的那个唯一的node_module</p>
+<h2 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a>Webpack</h2><h3 id="node内置path模块"><a href="#node内置path模块" class="headerlink" title="node内置path模块"></a>node内置path模块</h3><p>不同操作系统表示文件的方式不同：Windows：xxx\xxx.txt，Linux：xxx&#x2F;xxx.txt</p>
+<p>path模块就是对不同的操作系统生成对应的路径</p>
+<h3 id="-3"><a href="#-3" class="headerlink" title=""></a></h3><hr>
+<h2 id="版本控制工具：Git"><a href="#版本控制工具：Git" class="headerlink" title="版本控制工具：Git"></a>版本控制工具：Git</h2><p>简单来说就是游戏存档啊</p>
+<p>集中式版本控制：早期的版本控制，所有的数据备份都在一个服务器端</p>
+<p>分布式版本控制：每台电脑都能把代码仓库完整的镜像下来，git就是分布式</p>
+<ol>
+<li>每台电脑安装git后第一步就是配置信息</li>
+</ol>
+<p>配置名字：<code> git config --global user.name &quot;xxx&quot;</code></p>
+<p>配置邮箱：<code> git config --global user.email &quot;xxx@xx.com&quot;</code></p>
+<ol start="2">
+<li>正式管理项目，创建本地仓库，就在当前项目文件夹下</li>
+</ol>
+<p><code> git init</code></p>
+<ol start="3">
+<li>将项目的所有文件加入git的管理中</li>
+</ol>
+<p><code> git add .</code></p>
+<ol start="4">
+<li>把远程仓库完整的下载下来</li>
+</ol>
+<p><code> git clone &quot;xxx(地址)&quot;</code></p>
+<ol start="5">
+<li>提交到git仓库</li>
+</ol>
+<p><code> git commit -m &quot;（简介）&quot;</code></p>
+<ol start="6">
+<li>查看文件的状态</li>
+</ol>
+<p><code> git status</code></p>
+<ol start="7">
+<li>查看修改历史</li>
+</ol>
+<p><code> git log</code></p>
+<ol start="8">
+<li>版本回退</li>
+</ol>
+<p><code> git reset --hard HEAD^</code> 回退到上一个版本</p>
+<p><code> git reset --hard HEAD~100</code> 回到上100个版本</p>
+<p><code> git reset --hard xxx(commit id)</code> 回到对应哈希值的版本</p>
+<ol start="9">
+<li>上传远程仓库</li>
+</ol>
+<p><code> git push</code>  </p>
+<h3 id="对于在git管理文件中的状态"><a href="#对于在git管理文件中的状态" class="headerlink" title="对于在git管理文件中的状态"></a>对于在git管理文件中的状态</h3><ul>
+<li>未跟踪：默认创建的文件不会直接添加到git仓库中，要用git add命令</li>
+<li>已跟踪：添加到git仓库中的文件就是已跟踪状态</li>
+</ul>
+<p>已跟踪文件划分：</p>
+<ul>
+<li>staged：暂缓区中的文件状态</li>
+<li>Unmodified：commit命令，此时将staged文件可以提交到git仓库</li>
+<li>Modified：修改了某个文件进入的状态</li>
+</ul>
+<h3 id="gitignore"><a href="#gitignore" class="headerlink" title=".gitignore"></a>.gitignore</h3><p>列出git的忽略管理的文件</p>
+<blockquote>
+<p>git的服务器操作</p>
+</blockquote>
+<p>私有的远程仓库当然不能随意的访问，需要凭证，但是http协议是无状态连接（就是每次登录都要账号密码），操作麻烦，但是Git拥有一个凭证系统来处理这个问题</p>
+<p>对于Windows系统有类似于密钥的辅助工具 Git Credential Manager for Windows可以解决这个问题</p>
+<h3 id="SSH密钥"><a href="#SSH密钥" class="headerlink" title="SSH密钥"></a>SSH密钥</h3><p>SSH是加密的网络传输协 议，可以在不安全的网络中为网络服务提供安全的传输环境</p>
+<p>非对称加密的形式：自己客户端的电脑要生成一对公钥和私钥，公钥放在服务器端，私钥放在客户端，每次访问远程仓库就会自动匹配两台机子的密钥，实现登录连接</p>
+<p><code> ssh-keygen -t ed25513 -C &quot;xxx(邮箱)&quot;</code></p>
+<p>找到生成的公钥，配置到对应的git服务器上（比如Github），就完成了</p>
+<h3 id="与远程仓库建立连接"><a href="#与远程仓库建立连接" class="headerlink" title="与远程仓库建立连接"></a>与远程仓库建立连接</h3><p><code> git remote add origin（别名） &quot;(地址)&quot;</code></p>
+<p>   从远程仓库拿来代码</p>
+<p><code> git pull origin master(具体哪个分支)</code></p>
+<p>设置上游&#x2F;跟踪分支,在此之后就能直接打 git pull了</p>
+<p><code> git branch --set-upstream-to=origin/master</code></p>
+<h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><p>git的本质：每一次commit会形成一个对象，这个对象指向另一个记录着这次提交关联的文件的对象，而第二个的这个对象里面全是二进制文件的指针，二进制文件就是我们的源代码文件，因此git可以存下来多个版本。</p>
+<p><strong>进一步来说，git每一次提交master指针都向后移一次，每一个提交对象里都有连向上一次提交的的指针，也就是说，如果我们就是一步一步开发的话，整个项目仓库的版本互相联系又能互相到达，根本原因其实是他内部这样形成了一个链表结构，什么tag标签啊其实就是新建了一个不会随便乱动的指针，指向某一个commit对象罢了</strong></p>
+<p><strong>在进一步来说，后面所要学习的git分支，就很容易想到应该就是在某一个结点连向了多个儿子，变成了一颗树的结构，指针是双亲指针，在数据结构算法角度考虑那么一个git仓库就是一个并查集！！！</strong></p>
+<p>master分支：就是指向当前最后一次的提交</p>
+<p>HEAD指向谁当前分支就是哪，HEAD默认指向master</p>
+<p>创建新的分支，其实就是创建了一个类似于master的可移动的指针</p>
+<p><code> git branch text</code> 创建分支</p>
+<p><code> git checkout text</code>切换分支</p>
+<p><code>git merge hotfix</code> 合并分支（能合并前提是必须有共同祖先），<strong>分支合并后会有两个父亲指针，就会变成图结构</strong></p>
+<h3 id="git-flow"><a href="#git-flow" class="headerlink" title="git flow"></a>git flow</h3><p>一般大公司的开发规范</p>
+<p>一般在develop分支进行主要开发</p>
+<p>master一般合并develop构成一些很稳定的版本</p>
+<p>feature分支一般开发新功能</p>
+<p>hotfix分支一般用作修复bug</p>
+<h3 id="git-rebase"><a href="#git-rebase" class="headerlink" title="git rebase"></a>git rebase</h3><p>因为merge完了以后这块分支的结构就不是线性的了，rebase就是能改变父亲指针，然后合并之后就能改变成线性结构（开发不常用，主分支禁用），看效果比较危险，不是很熟练的开发者就先别用</p>
+<p><code> git rebase master</code> base改成master</p>
+<p><code> git checkout master</code> 切换到master</p>
+<p><code>git merge </code> feature 最后再合并</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">贺浩轩</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/07/03/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/">http://example.com/2023/07/03/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">往下翻！！！让你接下来时间的性价比翻十番</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/">前端工程化</a></div><div class="post_share"><div class="social-share" data-image="/img/12.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/07/03/JS%E9%AB%98%E7%BA%A7/"><img class="prev-cover" src="/img/12.jpg" onerror="onerror=null;src='/img/3.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">JS高级</div></div></a></div><div class="next-post pull-right"><a href="/2023/06/26/DOM-%E5%92%8C-BOM/"><img class="next-cover" src="/img/12.jpg" onerror="onerror=null;src='/img/3.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">DOM 和 BOM</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://pic1.zhimg.com/80/v2-97c5e8449ccc63d49a298291c61096df_720w.webp?source=1940ef5c" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">贺浩轩</div><div class="author-info__description">未来的一级棒程序猿！！   继续喜欢杰伦是不会让感性丢失的最后稻草</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">53</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">从分类页或标签寻找会更方便哦！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Node-js"><span class="toc-number">1.</span> <span class="toc-text">Node.js</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Node%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">1.1.</span> <span class="toc-text">Node应用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-number">1.2.</span> <span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Node-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7%EF%BC%9Anvm-windows"><span class="toc-number">2.</span> <span class="toc-text">Node 版本控制工具：nvm-windows</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Node%E8%BE%93%E5%85%A5"><span class="toc-number">3.</span> <span class="toc-text">Node输入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Node%E4%B8%AD%E4%B8%80%E4%BA%9B%E7%89%B9%E6%AE%8A%E7%9A%84%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-number">4.</span> <span class="toc-text">Node中一些特殊的全局变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E5%8C%96"><span class="toc-number">5.</span> <span class="toc-text">模块化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CommenJS"><span class="toc-number">5.1.</span> <span class="toc-text">CommenJS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#-1"><span class="toc-number">5.2.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ESmodule"><span class="toc-number">5.3.</span> <span class="toc-text">ESmodule</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7"><span class="toc-number">6.</span> <span class="toc-text">包管理工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#npm"><span class="toc-number">6.1.</span> <span class="toc-text">npm</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#package-json"><span class="toc-number">6.1.1.</span> <span class="toc-text">package.json</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#npm-install"><span class="toc-number">6.2.</span> <span class="toc-text">npm install</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#yarn"><span class="toc-number">6.3.</span> <span class="toc-text">yarn</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cnpm"><span class="toc-number">6.4.</span> <span class="toc-text">cnpm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#-2"><span class="toc-number">6.5.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pnpm"><span class="toc-number">6.6.</span> <span class="toc-text">pnpm</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Webpack"><span class="toc-number">7.</span> <span class="toc-text">Webpack</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#node%E5%86%85%E7%BD%AEpath%E6%A8%A1%E5%9D%97"><span class="toc-number">7.1.</span> <span class="toc-text">node内置path模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#-3"><span class="toc-number">7.2.</span> <span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7%EF%BC%9AGit"><span class="toc-number">8.</span> <span class="toc-text">版本控制工具：Git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E4%BA%8E%E5%9C%A8git%E7%AE%A1%E7%90%86%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84%E7%8A%B6%E6%80%81"><span class="toc-number">8.1.</span> <span class="toc-text">对于在git管理文件中的状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gitignore"><span class="toc-number">8.2.</span> <span class="toc-text">.gitignore</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SSH%E5%AF%86%E9%92%A5"><span class="toc-number">8.3.</span> <span class="toc-text">SSH密钥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8E%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%BB%BA%E7%AB%8B%E8%BF%9E%E6%8E%A5"><span class="toc-number">8.4.</span> <span class="toc-text">与远程仓库建立连接</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%94%AF"><span class="toc-number">9.</span> <span class="toc-text">分支</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#git-flow"><span class="toc-number">9.1.</span> <span class="toc-text">git flow</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git-rebase"><span class="toc-number">9.2.</span> <span class="toc-text">git rebase</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/10/25/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" title="项目开发流程"><img src="/img/12.jpg" onerror="this.onerror=null;this.src='/img/3.jpg'" alt="项目开发流程"/></a><div class="content"><a class="title" href="/2023/10/25/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" title="项目开发流程">项目开发流程</a><time datetime="2023-10-25T00:59:38.000Z" title="发表于 2023-10-25 08:59:38">2023-10-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/14/Vuex-Pinia/" title="Vuex-Pinia-axios"><img src="/img/12.jpg" onerror="this.onerror=null;this.src='/img/3.jpg'" alt="Vuex-Pinia-axios"/></a><div class="content"><a class="title" href="/2023/10/14/Vuex-Pinia/" title="Vuex-Pinia-axios">Vuex-Pinia-axios</a><time datetime="2023-10-14T03:19:02.000Z" title="发表于 2023-10-14 11:19:02">2023-10-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/11/Vue-Router/" title="Vue Router"><img src="/img/12.jpg" onerror="this.onerror=null;this.src='/img/3.jpg'" alt="Vue Router"/></a><div class="content"><a class="title" href="/2023/10/11/Vue-Router/" title="Vue Router">Vue Router</a><time datetime="2023-10-11T08:33:57.000Z" title="发表于 2023-10-11 16:33:57">2023-10-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/15/%E9%9A%8F%E6%9C%BA%E5%8C%96%E7%AE%97%E6%B3%95/" title="随机化算法"><img src="/img/5.jpg" onerror="this.onerror=null;this.src='/img/3.jpg'" alt="随机化算法"/></a><div class="content"><a class="title" href="/2023/09/15/%E9%9A%8F%E6%9C%BA%E5%8C%96%E7%AE%97%E6%B3%95/" title="随机化算法">随机化算法</a><time datetime="2023-09-15T12:15:15.000Z" title="发表于 2023-09-15 20:15:15">2023-09-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/13/%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/" title="组件化开发"><img src="/img/12.jpg" onerror="this.onerror=null;this.src='/img/3.jpg'" alt="组件化开发"/></a><div class="content"><a class="title" href="/2023/08/13/%E7%BB%84%E4%BB%B6%E5%8C%96%E5%BC%80%E5%8F%91/" title="组件化开发">组件化开发</a><time datetime="2023-08-13T12:44:20.000Z" title="发表于 2023-08-13 20:44:20">2023-08-13</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/12.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 贺浩轩</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
